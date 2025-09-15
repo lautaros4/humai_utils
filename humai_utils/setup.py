@@ -1,6 +1,12 @@
 import setuptools
+import os 
+import sys
 
-with open("DESCRIPTION.md", "r", encoding="utf-8") as fh:
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+file_path = os.path.join(script_dir, "description.md")
+
+with open(file_path, "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
